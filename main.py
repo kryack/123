@@ -23,7 +23,7 @@ class dctlayer():#(nn.Module):
 A = dctlayer()
 sig = np.random.rand(16000)
 
-w = A.forward(sig)
+w = A.forward(sig, window='hann')
 wmfcc = A.forward(sig, MFCC=True)
 
 print('Размеры:', sig.shape, w.shape, wmfcc.shape)      
